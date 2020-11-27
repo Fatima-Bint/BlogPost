@@ -1,10 +1,13 @@
 import React from 'react'
-import * as ReactBootstrap from "react-bootstrap";
-import {Browserrouter as Link} from 'react-router-dom';
+//import * as ReactBootstrap from "react-bootstrap";
+//import {Browserrouter as Link} from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
+import { Nav, Container } from 'react-bootstrap';
 
 function Navbar (){
 
   return(
+    /*
     <div>
       <ReactBootstrap.Navbar
         collapseOnSelect
@@ -59,6 +62,29 @@ function Navbar (){
       </ReactBootstrap.Navbar>
       
     </div>
+*/
+
+<div>
+               <Navbar collapseOnSelect expand="lg" bg="blue" >
+                   <Container>
+   
+                       <Link to="/"><Navbar.Brand>Sacx</Navbar.Brand></Link>
+                       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                       <Navbar.Collapse id="responsive-navbar-nav">
+                           <Nav className="mr-auto">
+                               <Nav.Link as={Link} to="/">Home</Nav.Link>
+                               <Nav.Link as={Link} to="/about">About Us</Nav.Link>
+                               </Nav>
+                               
+                           <Nav>
+                               <Nav.Link as={Link} to="signin">Sign In</Nav.Link>
+                               <Nav.Link as={Link} to="join">Sign Up</Nav.Link>
+                           </Nav>
+                       </Navbar.Collapse>
+                   </Container>
+   
+               </Navbar>
+           </div>
 
 
   )
